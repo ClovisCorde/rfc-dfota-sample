@@ -8,6 +8,8 @@ manifest:
   remotes:
     - name: zephyrproject-rtos
       url-base: https://github.com/zephyrproject-rtos
+    - name: km
+      url-base: https://github.com/kickmaker
 
   projects:
     - name: zephyr
@@ -20,3 +22,7 @@ manifest:
           - cmsis      # required by the ARM port
           - hal_nordic # required by the custom_plank board (Nordic based)
           - hal_stm32  # required by the nucleo_f302r8 board (STM32 based)
+    - name: heatshrink
+      remote: km
+      revision: zephyr
+      path: modules/lib/heatshrink
